@@ -11,13 +11,13 @@ cd <path\to\zephyr-projects>
 Create a new virtual environment.
 
 ```shell
-python -m venv zephyr-t2-workspace-project\.venv
+python -m venv zephyr-project\.venv
 ```
 
 Activate the virtual environment.
 
 ```shell
-zephyr-t2-workspace-project\.venv\Scripts\activate.bat
+zephyr-project\.venv\Scripts\activate.bat
 ```
 
 Once activated your shell will be prefixed with `(.venv)`. The virtual environment can be deactivated at any time by running `deactivate`.
@@ -31,8 +31,8 @@ pip install west
 Initialize the workspace and get the Zephyr source code.
 
 ```shell
-west init -m https://github.com/borrelunde/zephyr-t2-workspace --mr master zephyr-t2-workspace-project
-cd zephyr-t2-workspace-project
+west init -m https://github.com/borrelunde/zephyr-application --mr master zephyr-project
+cd zephyr-project
 west update
 ```
 
@@ -48,10 +48,10 @@ Zephyr's `scripts\requirements.txt` file declares additional Python dependencies
 pip install -r zephyr\scripts\requirements.txt
 ```
 
-Enter the workspace directory.
+Enter the application directory.
 
 ```shell
-cd zephyr-t2-workspace
+cd zephyr-application
 ```
 
 Build the application. You can replace the board name `nrf52840dk_nrf52840` with a board of your liking.
