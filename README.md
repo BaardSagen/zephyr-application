@@ -42,7 +42,7 @@ Export a `Zephyr CMake package`. This allows CMake to automatically load boilerp
 west zephyr-export
 ```
 
-Zephyr?s `scripts\requirements.txt` file declares additional Python dependencies. Install them with `pip`.
+Zephyr's `scripts\requirements.txt` file declares additional Python dependencies. Install them with `pip`.
 
 ```shell
 pip install -r zephyr\scripts\requirements.txt
