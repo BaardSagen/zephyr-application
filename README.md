@@ -20,6 +20,12 @@ Activate the virtual environment:
 zephyr-t2-workspace-project\.venv\Scripts\activate.bat
 ```
 
+Install west:
+
+```shell
+pip install west
+```
+
 Once activated your shell will be prefixed with `(.venv)`. The virtual environment can be deactivated at any time by running `deactivate`.
 
 Initialize workspace:
