@@ -2,43 +2,37 @@
 
 Run Command Prompt.
 
-Go to the directory where you would like your Zephyr project to be:
+Go to the directory where you would like your Zephyr project to be.
 
 ```shell
 cd <path\to\zephyr-projects>
 ```
 
-Create a new virtual environment:
+Create a new virtual environment.
 
 ```shell
 python -m venv zephyr-t2-workspace-project\.venv
 ```
 
-Activate the virtual environment:
+Activate the virtual environment.
 
 ```shell
 zephyr-t2-workspace-project\.venv\Scripts\activate.bat
 ```
 
-Install west:
+Once activated your shell will be prefixed with `(.venv)`. The virtual environment can be deactivated at any time by running `deactivate`.
+
+Install west.
 
 ```shell
 pip install west
 ```
 
-Once activated your shell will be prefixed with `(.venv)`. The virtual environment can be deactivated at any time by running `deactivate`.
-
-Initialize workspace:
+Initialize the workspace and get the Zephyr source code.
 
 ```shell
 west init -m https://github.com/borrelunde/zephyr-t2-workspace --mr master zephyr-t2-workspace-project
-```
-
-```shell
 cd zephyr-t2-workspace-project
-```
-
-```shell
 west update
 ```
 
@@ -54,13 +48,19 @@ Zephyr's `scripts\requirements.txt` file declares additional Python dependencies
 pip install -r zephyr\scripts\requirements.txt
 ```
 
+Enter the workspace directory.
+
 ```shell
 cd zephyr-t2-workspace
 ```
 
+Build the application. You can replace the board name `nrf52840dk_nrf52840` with a board of your liking.
+
 ```shell
 west build -b nrf52840dk_nrf52840 app
 ```
+
+Flash the application to the board.
 
 ```shell
 west flash
