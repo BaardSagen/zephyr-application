@@ -2,7 +2,7 @@
 #include <zephyr/kernel.h>
 
 int main(void) {
-    printk("Application version %s initialized on board %s!\r\n",
+    printk("Application version app1- %s initialized on board %s!\r\n",
            APP_VERSION_STRING, CONFIG_BOARD);
     return 0;
 }
