@@ -1,3 +1,5 @@
+.vscode/*
+!.vscode/c_cpp_properties.json
 zephyr/*
 build/*
 zephyr-project/*
